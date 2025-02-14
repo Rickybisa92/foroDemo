@@ -1,15 +1,70 @@
+:root {
+    --background-color: #f4f4f4;
+    --text-color: #333;
+    --header-background: #bc4749;
+    --header-text: white;
+    --hover-header-text: #1a1a1a;
+    --normal-text: #333;
+    --hover-text: #bc4749;
+    --card-background: white;
+    --button-background: #bc4749;
+    --button-text: white;
+    --footer-background: #bc4749;
+    --footer-text: white;
+}
+
+.dark-mode {
+    --background-color: #181818;
+    --text-color: #f4f4f4;
+    --header-background: #222;
+    --header-text: #e0b833;
+    --hover-header-text: #f4f4f4;
+    --normal-text: #f4f4f4;
+    --hover-text: #e0b833;
+    --card-background: #2a2a2a;
+    --button-background: #444;
+    --button-text: #e0b833;
+    --footer-background: #222;
+    --footer-text: #e0b833;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: var(--background-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 header {
-    background: #bc4749;
-    color: white;
+    background: var(--header-background);
+    color: var(--header-text);
     padding: 1px;
     text-align: center;
+    transition: background-color 0.3s, color 0.3s;
 }
+
+.modo-container {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#modo-toggle {
+    background: var(--header-background);
+    color: var(--button-text);
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
@@ -20,12 +75,12 @@ nav ul li {
     margin: 0 15px;
 }
 nav ul li a {
-    color: white;
+    color: var(--header-text);
     text-decoration: none;
 }
 
 nav ul li a:hover {
-    color: #000000;
+    color: var(--hover-header-text);
 }
 
 .banner {
@@ -38,7 +93,7 @@ nav ul li a:hover {
 .banner-img {
     max-width: 100%;
     height: 150px;
-    border: 3px solid white;
+    border: 3px solid var(--header-text);
 }
 
 main {
@@ -54,20 +109,20 @@ main {
 
 .categorias a {
     text-decoration: none;
-    color: #1f1f1f;
+    color: var(--normal-text);
 }
 
 .categorias a:hover {
-    color: #af3838;
+    color: var(--hover-text);
 }
 
-.hilos a {
+.hilos a, h2, p {
     text-decoration: none;
-    color: #1f1f1f;
+    color: var(--normal-text);
 }
 
 .hilos a:hover {
-    color: #af3838;
+    color: var(--hover-text);
 }
 
 .categorias, .hilos {
@@ -75,7 +130,7 @@ main {
     margin-right: 20px;
 }
 .categorias, .hilos, .nuevo-hilo {
-    background: white;
+    background: var(--card-background);
     padding: 15px;
     margin-bottom: 20px;
     border-radius: 5px;
@@ -92,8 +147,8 @@ main {
     border-radius: 5px;
 }
 .nuevo-hilo button {
-    background: #333;
-    color: white;
+    background: var(--button-background);
+    color: var(--button-text);
     border: none;
     padding: 10px;
     cursor: pointer;
@@ -102,7 +157,7 @@ main {
 footer {
     text-align: center;
     padding: 10px;
-    background: #333;
-    color: white;
+    background: var(--footer-background);
+    color: var(--footer-text);
     margin-top: 20px;
 }
