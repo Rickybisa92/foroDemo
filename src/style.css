@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+header {
+    background: #bc4749;
+    color: white;
+    padding: 1px;
+    text-align: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #000000;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.banner-img {
+    max-width: 100%;
+    height: 150px;
+    border: 3px solid white;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.cabezera {
+    display: flex;
+    flex-direction: row;
+}
+
+.categorias a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.categorias a:hover {
+    color: #af3838;
+}
+
+.hilos a {
+    text-decoration: none;
+    color: #1f1f1f;
+}
+
+.hilos a:hover {
+    color: #af3838;
+}
+
+.categorias, .hilos {
+    flex: 1;
+    margin-right: 20px;
+}
+.categorias, .hilos, .nuevo-hilo {
+    background: white;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.nuevo-hilo form {
+    display: flex;
+    flex-direction: column;
+}
+.nuevo-hilo input, .nuevo-hilo textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.nuevo-hilo button {
+    background: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #333;
+    color: white;
+    margin-top: 20px;
+}
